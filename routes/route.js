@@ -10,6 +10,6 @@ module.exports = function(app){
   });
 
   app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname, '../public/404.jpg'));
+    res.status(404).sendFile(path.join(__dirname, '../public/404.jpg'));
   })
 }
