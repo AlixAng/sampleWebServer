@@ -1,10 +1,11 @@
 const express = require('express');
+const config = require('./config/config.js');
 const app = express();
 
-
-var port = 2000;
-var server = app.listen(port, () => {
-  console.log('we are live at:',server.address().port);
+app.get('/', (req,res) => {
+  res.send('Hello world !');
 });
 
-
+var server = app.listen(config.server.port, ()=>{
+  console.log('we are live at:', config.server.host, server.address().port);
+});
