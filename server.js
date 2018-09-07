@@ -3,8 +3,6 @@ const config = require('./config/config.js');
 const app = express();
 require('./routes/route')(app);
 
-//middleware to use static file
-app.use(express.static(path.join(__dirname+'public')));
 
 // middleware to allow cross origin
 app.use(function(req, res, next){
