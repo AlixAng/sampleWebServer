@@ -7,12 +7,12 @@ const dev = {
   }
 };
 
-const prod = {
+const production = {
   server : {
     host : process.env.HOST ||'0.0.0.0',
     port : process.env.PORT || 2000
   }
 };
 
-const config ={dev, prod};
+const config ={dev, production};
 module.exports = config[env];
